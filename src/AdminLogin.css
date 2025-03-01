@@ -1,0 +1,47 @@
+.admin-login {
+  width: 300px;  /* 设置固定宽度 */
+  margin: 50px auto;  /* 居中显示 */
+  padding: 20px;  /* 内边距让内容不贴边 */
+  background-color: #f7f7f7;  /* 设置背景色 */
+  border-radius: 8px;  /* 边角圆滑 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* 添加阴影效果 */
+  text-align: center;  /* 文字居中 */
+}
+
+.admin-login h2 {
+  margin-bottom: 20px;  /* 增加标题与输入框之间的间隔 */
+  color: #333;  /* 标题颜色 */
+}
+
+.admin-login input {
+  width: 100%;  /* 输入框宽度填满容器 */
+  padding: 10px;  /* 输入框内边距 */
+  margin-bottom: 15px;  /* 输入框之间的间距 */
+  border: 1px solid #ccc;  /* 边框 */
+  border-radius: 4px;  /* 圆角 */
+  box-sizing: border-box;  /* 包含内边距和边框在内 */
+}
+
+
+
+.admin-login button:hover {
+  background-color: #5a2a1a;  /* 鼠标悬停时颜色变暗 */
+}
+
+.admin-login .error {
+  color: red;  /* 错误信息红色 */
+  margin-top: 10px;  /* 错误信息与按钮的间隔 */
+}
+
+  
+.admin-login button {
+  padding: 6px 12px;  /* 缩小按钮 */
+  background-color: #8c4a2e;  /* 保持一致的按钮颜色 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;  /* 按钮宽度填满父容器 */
+  margin-top: 10px;  /* 按钮与输入框之间的间隔 */
+}
+

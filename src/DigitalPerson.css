@@ -1,0 +1,22 @@
+.digital-person{
+  text-align: center;
+}
+
+.digital-person input {
+    width: 50%;  /* 输入框宽度填满容器 */
+    padding: 20px;  /* 输入框内边距 */
+    margin-bottom: 20px;  /* 输入框之间的间距 */
+    border: 1px solid #ccc;  /* 边框 */
+    border-radius: 4px;  /* 圆角 */
+    box-sizing: border-box;  /* 包含内边距和边框在内 */
+  }
+
+.response-box{
+  width: 50%;
+  height: 400px;  /* 根据需求调整高度 */
+  margin:20px auto;
+  background-color: #f0f0f0;  /* 浅灰色背景 */
+  border: 1px solid #ccc;
+  display: block;  /* 确保它是块级元素 */
+  min-height: 100px; /* 最小高度 */
+}

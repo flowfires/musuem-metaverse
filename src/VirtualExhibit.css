@@ -1,0 +1,37 @@
+.virtual-exhibit {
+    color: #d7b08d;
+    text-align: center; /* 水平居中 */
+    height: 100vh;           /* 确保容器占满屏幕高度 */
+    font-family: 'Times New Roman', serif;
+}
+  
+
+.virtual-exhibit-card {
+    border: 1px solid #d7b08d;
+    padding: 10px;
+    border-radius: 8px;
+    width: 500px;
+    text-align: center;
+    background-color: rgba(140,74,46,0.5);
+    
+    margin: 0 auto;  /* 居中 */
+  }
+  
+  .virtual-exhibit-card img {
+    width: 70%;
+    height: 50%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .virtual-exhibit-card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .virtual-exhibit-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  
