@@ -1,69 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* 确保边框和内边距不会影响元素尺寸 */
-  }
+/* HomePage.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: white;
+}
 
-/* 主页整体布局 */
 .home {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  /* 导航栏样式 */
-  .navbar {
-    background-color: #B36D61;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navbar ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-  }
-  
-  .navbar li {
-    margin: 0;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .navbar a:hover {
-    color: #f0a500;
-  }
-  
-  /* 页面主体内容 */
-  .main-content {
-    text-align: center;
-    flex-grow: 1; /* 填充剩余空间 */
-  }
-  
-  /* 尾栏样式 */
-  .footer {
-    background-color: #549688;
-    color: #FFFFFF;
-    padding: 60px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: url('/public/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex; /* 使用 Flex 布局 */
+  justify-content:flex-end ; /* 两端对齐，元素分别位于左右 */
+  align-items: center; /* 垂直居中 */
+  padding: 0 20px; /* 根据需要调整内边距 */
+  background-color: transparent; 
+  height: 60px; /* 导航栏高度 */
+  border:none;
+  box-shadow:none;
+}
+
+.admin-login-link a {
+  font-size: 14px; /* 缩小字号 */
+  color: #ffffff; /* 设置文字颜色，提升对比度 */
+  text-decoration: none; /* 去掉下划线 */
+  padding-right: 20px; /* 给右侧留些间距 */
+}
+
+.admin-login-link a:hover {
+  color: #00bcd4; /* 鼠标悬停时的高亮效果 */
+}
+
+/* 主页 Banner */
+.main-content {
+  margin-top: 80px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #D2B48C, #8B5A2B); /* 浅棕到深棕渐变 */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-shadow: 0px 0px 8px rgba(139, 90, 43, 0.8); /* 柔和的棕色光晕 */
+}
 
 
-  
+/* 入口模块 */
+.entry-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+
+
+.entry-card {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  height:300px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.entry-card h2 {
+  font-size: 24px;
+}
+
+.entry-card p {
+  font-size: 20px;
+}
+
+.entry-card:hover {
+  background: rgba(0, 0, 0, 0.6);
+}

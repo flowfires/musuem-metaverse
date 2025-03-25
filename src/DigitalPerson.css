@@ -1,9 +1,19 @@
 .digital-person{
-  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 白色边框，增强轮廓感 */
+  backdrop-filter: blur(10px); /* 毛玻璃模糊效果 */
+  border-radius: 16px; /* 圆角边框 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* 投影增强立体感 */
+  padding: 20px; /* 内边距 */
+  width: 800px; /* 控制宽度 */
+  height: 900px;
+  margin: 50px auto; /* 居中 */
+  text-align: center; /* 文字居中 */
+  color: #fff; /* 文字颜色改为白色 */
 }
 
 .digital-person input {
-    width: 50%;  /* 输入框宽度填满容器 */
+    width: 70%;  
     padding: 20px;  /* 输入框内边距 */
     margin-bottom: 20px;  /* 输入框之间的间距 */
     border: 1px solid #ccc;  /* 边框 */
@@ -12,11 +22,15 @@
   }
 
 .response-box{
-  width: 50%;
-  height: 400px;  /* 根据需求调整高度 */
+  width: 70%;
+  height: 600px;  /* 根据需求调整高度 */
   margin:20px auto;
   background-color: #f0f0f0;  /* 浅灰色背景 */
   border: 1px solid #ccc;
   display: block;  /* 确保它是块级元素 */
   min-height: 100px; /* 最小高度 */
+}
+
+.response-box p {
+  color:black;
 }

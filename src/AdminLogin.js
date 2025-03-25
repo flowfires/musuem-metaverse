@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useAuth } from './AuthContext'; // 引入 useAuth
+import { useNavigate } from 'react-router-dom'; //跳转
 import './AdminLogin.css';
 
-function AdminLogin({ onLogin }) {
+function AdminLogin() {
+  const { login } = useAuth(); // 获取 login 函数
+  const navigate = useNavigate(); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -12,7 +16,8 @@ function AdminLogin({ onLogin }) {
     const defaultPassword = 'admin123';
 
     if (username === defaultUsername && password === defaultPassword) {
-      onLogin(); // 登录成功，调用onLogin函数
+      login(); // 登录成功，调用 login 函数
+      navigate('/');
     } else {
       setErrorMessage('用户名或密码错误');
     }

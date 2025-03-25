@@ -1,37 +1,147 @@
-.virtual-exhibit {
-    color: #d7b08d;
-    text-align: center; /* 水平居中 */
-    height: 100vh;           /* 确保容器占满屏幕高度 */
-    font-family: 'Times New Roman', serif;
-}
-  
+/* VirtualExhibit.css */
 
+/* 页面整体风格 */
+.virtual-exhibit {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+  min-height: 100vh;
+}
+
+/* 标题样式 */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* 卡片布局，使用 Grid 进行网格排列 */
+.exhibit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.overlay {
+  position: fixed;       /* 固定定位，确保全屏覆盖 */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* 全屏宽度 */
+  height: 100vh;         /* 全屏高度 */
+  background: rgba(0, 0, 0, 0.7); /* 半透明黑色背景，营造遮罩层效果 */
+  display: flex;         /* 使用 Flex 居中卡片 */
+  align-items: center;   /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  z-index: 1000;         /* 提高层级，确保遮罩层覆盖其他元素 */
+}
+
+/* 卡片样式 - 玻璃拟态风格 */
 .virtual-exhibit-card {
-    border: 1px solid #d7b08d;
-    padding: 10px;
-    border-radius: 8px;
-    width: 500px;
-    text-align: center;
-    background-color: rgba(140,74,46,0.5);
-    
-    margin: 0 auto;  /* 居中 */
+  position:relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.virtual-exhibit-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 255, 255, 0.5);
+}
+
+.card-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-content img {
+  width: 40%; /* 修改图片宽度为40% */
+  margin-right: 16px; /* 添加间距 */
+}
+
+.card-content .text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 图片样式 */
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.close-btn {
+  position: absolute;  
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #64ffda;
+}
+
+/* 卡片内的图片 */
+.card-image {
+  width: 100%;  
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card-image:hover {
+  transform: scale(1.05); /* 轻微放大 */
+}
+
+.speak-button {
+  background-color: #0a192f;  /* 深蓝色背景 */
+  color: #64ffda;             /* 荧光蓝文字 */
+  border: 2px solid #64ffda;  /* 荧光蓝边框 */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;                   /* 图标与文字间距 */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.speak-button:hover {
+  background-color: #112240;
+  box-shadow: 0 0 15px #64ffda;
+  transform: scale(1.1);
+}
+
+
+/* 适配移动端 */
+@media (max-width: 768px) {
+  .exhibit-gallery {
+    grid-template-columns: 1fr;
   }
-  
-  .virtual-exhibit-card img {
-    width: 70%;
-    height: 50%;
-    border-radius: 8px;
-    transition: transform 0.3s;
-  }
-  
-  .virtual-exhibit-card img:hover {
-    transform: scale(1.05);
-  }
-  
-  .virtual-exhibit-card p {
-    font-size: 14px;
-    color: #555;
-    margin-top: 10px;
-  }
-  
-  
+}

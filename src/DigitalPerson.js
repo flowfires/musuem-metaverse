@@ -23,7 +23,7 @@ function DigitalPerson() {
         <p>数字人形象将显示在这里</p>
       </div>
       
-      <button onClick={handleSpeak}>语音讲解</button>
+      <button onClick={handleSpeak}>生成数字人形象</button>
     </div>
   );
 }
